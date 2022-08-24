@@ -1,0 +1,44 @@
+$gradient-v:  linear-gradient(0deg, $secondary, $primary); 
+$gradient-h:  linear-gradient(90deg, $secondary, $primary); 
+$gradient-h-hover:  linear-gradient(90deg, lighten($secondary, 10%), lighten($primary, 10%)); 
+$gradient-h-active:  linear-gradient(90deg, darken($secondary, 10%), darken($primary, 10%)); 
+.btn-gradient {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  color: #FFF;
+  border-color: transparent;
+  background: $gradient-h;
+  background-origin: border-box;
+  background-clip: border-box;
+  &:hover {
+    color: #FFF;
+    background: $gradient-h-hover; 
+    background-origin: border-box;
+    background-clip: border-box;
+  }
+  &:active {
+    background: $gradient-h-active; 
+    background-origin: border-box;
+    background-clip: border-box;
+  }
+}
+.text-gradient {
+  background: $gradient-v; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.btn-outline-light-primary {
+  border: 1px solid #FFF;
+  color: #FFF;
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+  &:active {
+    border-color: darken($primary, 20%);
+    color: darken($primary, 20%);
+  }
+}
